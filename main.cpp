@@ -3,8 +3,7 @@
 using namespace std;
 
 int main() {
-    Libro libros[100];
-    int n = 0;
+    Biblioteca biblioteca;
     int opcion;
 
     do {
@@ -12,11 +11,11 @@ int main() {
         cin >> opcion;
         cin.ignore();
 
-        switch (opcion) {
-            case 1: agregarLibro(libros, n); break;
-            case 2: mostrarLibros(libros, n); break;
+        switch(opcion) {
+            case 1: biblioteca.agregarLibro(); break;
+            case 2: biblioteca.mostrarLibros(); break;
         }
-    } while (opcion != 3);
+    } while(opcion != 3);
 
     return 0;
 }
